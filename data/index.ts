@@ -94,7 +94,7 @@ export const navItems = [
       img: "/p3.png",
       // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
       iconLists: ["/ts.svg","/next.svg","/tail.svg","/react.svg"],
-      link: `https://github.com/adrianhajdin/ai_saas_app`,
+      link: `https://pricewise-nu-fawn.vercel.app/`,
     },
     {
       id: 4,
