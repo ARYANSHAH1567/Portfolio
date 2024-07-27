@@ -11,7 +11,7 @@ import { staggerContainer } from '@/utils/motion'
 const Skills = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [skill, setSkill] = useState("");
-  const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);;
+  const [hoveredIcon, setHoveredIcon] = useState(null);;
 
   return (
     <section className="mt-8" id="skills">
