@@ -1,0 +1,71 @@
+/* Tailwind CSS is used as usual, with additional custom properties and animations defined separately */
+
+.cycle-div span {
+    @apply absolute top-0 left-0 whitespace-nowrap;
+    opacity: 0;
+    animation: rotateWord var(--anim-length) linear infinite;
+    animation-delay: var(--anim-delay);
+  }
+  
+  .cycle-div {
+    @apply text-blue-500 font-bold;
+  }
+
+
+  @keyframes rotateWord {
+  0%{
+    opacity: 0;
+}
+2% {
+    opacity: 0;
+    transform: translateY(-30%);
+}
+5% {
+    opacity: 1;
+    transform: translateY(0);
+}
+17% {
+    opacity: 1;
+    transform: translateY(0);
+}
+20% {
+    opacity: 0;
+    transform: translateY(30%);
+}
+80% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+  }
+  
+.break{
+    display:none;
+}
+
+@media (max-width:528px) {
+    .and{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .work{
+        margin-top: 70px;
+    }
+    .hero{
+        font-size: 2rem;
+    }
+}
+.hero{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @media (min-width:528px) and (max-width:1240px)
+  {
+    h2{
+        font-size: 40px;
+    }
+  }

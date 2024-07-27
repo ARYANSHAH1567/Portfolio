@@ -12,6 +12,7 @@ import { redirect } from "next/dist/server/api-utils";
 
 
 const RecentProjects = () => {
+  const url = `https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg`;
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
@@ -47,7 +48,7 @@ const RecentProjects = () => {
               </h1>
 
               <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-3"
                 style={{
                   color: "#BEC1DD",
                   margin: "1vh 0",
