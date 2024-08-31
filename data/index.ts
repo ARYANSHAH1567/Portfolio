@@ -30,7 +30,7 @@ export const projects = [
     des: "PriceWise is a price tracking tool that monitors product prices online, alerting users to price drops and ensuring they get the best deals. Uses the concept of web-scraping & cron-job",
     img: "/p3.png",
     iconLists: ["/ts.svg", "/next.svg", "/tail.svg", "/react.svg"],
-    link: `https://pricewise-nu-fawn.vercel.app/`,
+    link: `https://pricewise-test.vercel.app/`,
   },
   {
     id: 4,
