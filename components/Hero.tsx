@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./ui/MagicButton";
@@ -25,6 +26,16 @@ const Hero = () => {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000); // 2-second delay
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
+
   return (
     <div className="pb-20 pt-36">
       <div>
@@ -50,8 +61,9 @@ const Hero = () => {
            <TypewriterEffectSmooth words={words} />
           </h2> 
           <div
-            className="flex flex-col items-start  font-bold mobile:gap-1 text-center text-[40px] md:text-5xl lg:text-6xl"
-            style={{ opacity: 1, transform: "none" }}
+              className={`flex flex-col items-start font-bold mobile:gap-1 text-center text-[40px] md:text-5xl lg:text-6xl transition-opacity duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
           >
             <div>I am a student at IIIT Gwalior</div>
             <div className="flex flex-row gap-2 flex-wrap max-w-[89vw] and">
@@ -88,7 +100,7 @@ const Hero = () => {
                     } as React.CSSProperties
                   }
                 >
-                  Programmer
+                  Open-Source Contributor
                 </span>
                 <span
                   className="tags block sm:inline"
@@ -99,7 +111,7 @@ const Hero = () => {
                     } as React.CSSProperties
                   }
                 >
-                  Full Stack Developer
+                 Dev ops enthusiast
                 </span>
               </div>
             </div>
